@@ -8,7 +8,7 @@ RUN apt install -y git libglm-dev ninja-build libgl1-mesa-dev ffmpeg libsm6 libx
 
 WORKDIR /ld
 
-RUN git clone https://github.com/luciddreamer-cvlab/LucidDreamer.git
+RUN git clone https://github.com/ZeroSpace-Studios/LucidDreamer.git
 
 WORKDIR /ld/LucidDreamer
 
