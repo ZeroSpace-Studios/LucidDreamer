@@ -2,6 +2,8 @@ FROM nvidia/cuda:11.7.1-devel-ubuntu20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV CUDA_VISIBLE_DEVICES=0
+
 RUN apt update -y
 
 RUN apt install -y git libglm-dev ninja-build libgl1-mesa-dev ffmpeg libsm6 libxext6
@@ -20,4 +22,4 @@ RUN export FORCE_CUDA="1" && export TORCH_CUDA_ARCH_LIST="3.5;5.0;6.0;6.1;7.0;7.
 
 RUN python3.9 run.py || true
 
-CMD CUDA_VISIBLE_DEVICES=0 python3.9 app.py
+CMD python3.9 app.py
